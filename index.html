@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/gif/png" href="img/icon.png">
+	<title>S Study</title> 
+	<!-- CSS file connected -->
+	<link rel="stylesheet" type="text/css" href="style/style1.css">
+	<!-- font awesome cdn added -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+	<!-- Sweet Alert Cnd added -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+</head>
+<body>
+	<!-- header section start -->
+  <header> 
+  	<div class="head">
+		  <h1><i class="png fa-solid fa-book"></i>  S Study</h1>
+		  <p>Created by @Rakibul Islam Sony</p>		
+	  </div>
+  	<div class="user">
+		  <a class="aa transparent" href="#" id="sign-in-btn2" >Sing in</a>
+		  <a class="aa2 transparent" href="#" id="sign-up-btn2">Sing Up</a> 
+	  </div> 
+  </header>
+  <!-- header section end -->
+
+  <!-- Container Section Start -->
+	<div class="container">
+		<!-- Signin-Signup Section Start -->
+		<div class="signin-signup">
+			<!-- Signin form Section Start -->
+		  <form action="#" class="sign-in-form" name="Form2">
+				<div class="input-field">
+					<i class="fas fa-user"></i>
+					<input type="text" name="id" id="id" placeholder="Email or Phone number">	 
+					<div class="error2" id="idErr"></div>	 		 	
+				</div>
+				<div class="input-field">
+					<i class="fas fa-lock"></i>
+					<input type="password" name="password2" id="password2" placeholder="Password"> 
+					<div class="error2" id="password2Err"></div>					
+				</div>
+				<label class="btn solid"  onclick="return validateForm2()">Login</label>
+				<a class="fpass" href="#">Forgot Password ?</a>
+				<div class="p">
+					<p>----------------or---------------</p>
+				</div>
+				<button class="btn2 transparent" id="sign-up-btn">Create a new Account</button>
+			</form>
+			<!-- Signin form Section End -->
+
+		  <!-- Signup form Section Start -->
+      <form action="#" method="POST" class="sign-up-form form2" name="Form" onsubmit="return validateForm()" >
+        <h2>Create a new account</h2>
+        <div class="form3"> 
+          <div class="box">
+            <label>Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your full name">
+            <div class="error" id="nameErr"></div>
+          </div>
+          <div class="box">
+            <label>University</label>
+            <select name="university" id="university">
+              <option>Select</option>
+              <option>Pundra University of Science and Technology</option>
+              <option>North South University</option>
+              <option>East West University</option>
+              <option>BRAC University</option>
+              <option>Bangladesh University</option>
+            </select> 
+            <div class="error" id="universityErr"></div>
+          </div>
+          <div class="box">
+            <label>Department</label>
+            <select name="department" id="department">
+              <option>Select</option>
+              <option>CSE</option>
+              <option>EEE</option>
+              <option>BBA</option>
+              <option>CVIL</option>
+              <option>ENGLISH</option>
+              <option>ISLAMIC</option>
+            </select> 
+            <div class="error" id="departmentErr"></div>
+          </div>
+          <div class="box">
+            <label>Email </label>
+            <input type="text" name="email" id="email" placeholder="abc123@*.com">
+            <div class="error" id="emailErr"></div>
+          </div>
+          <div class="box">
+            <label>Phone Number</label>
+            <input type="text" name="mobile" maxlength="11" id="mobile" placeholder="BD(+880)">
+            <div class="error" id="mobileErr"></div>
+          </div>
+          <div class="box"> 
+            <label>Gender</label>
+            <div class="form-inline" id="gender">
+              <label><input type="radio" name="gender" value="male"> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label> 
+              <label><input type="radio" name="gender" value="Both"> Both</label> 
+            </div>
+            <div class="error" id="genderErr"></div>
+          </div>
+          <div class="box">
+            <label>Password</label>
+            <input type="password" name="password"  id="password" placeholder="******"> 
+            <div class="error" id="passwordErr"></div>
+          </div>
+          <div class="box">
+            <label>Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" placeholder="******">
+            <div class="error" id="cpasswordErr"></div>
+          </div>     
+        </div>
+   
+        <div class="box">
+          <input type="submit" value="Sign up">
+        </div>
+        <div class="already">
+				  <p>Already have a account,  <a href="#" class="btn-in transparent" id="sign-in-btn">Sign in</a></p>		
+		    </div>
+      </form>
+      <!-- Signin form Section End -->
+
+		</div>
+    <!-- Signin-Signup Section End -->
+
+    <!-- Panel section Start -->
+		<div class="panels-container">
+      <div class="panel left-panel">
+        <img src="img/book2.gif" class="image gif" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <img src="img/book4.gif" class="image gif2" alt="" />
+      </div>
+    </div>
+    <!-- Panel section End -->
+
+  </div>
+  <!-- Container section End -->
+ 
+  <!-- Javascript file connected -->
+	<script src="script\script.js"></script>
+	<script src="index.js"></script>  
+</body>
+</html>
